@@ -28,7 +28,7 @@ conexion = sqlite3.connect("ventas.db")
 
 print( f" {datos_usuarios}")
 
-# cursor1 = conexion.cursor()
+cursor1 = conexion.cursor()
 # cursor1.execute(""" CREATE TABLE USUARIO(
 #                     idusuario INTEGER PRIMARY KEY AUTOINCREMENT,
 #                     usuario TEXT, 
@@ -43,36 +43,56 @@ print( f" {datos_usuarios}")
 #                     precio INTEGER)
 #                 """)
 
-lista_usuarios = datos_usuarios.split() 
-lista_claves = datos_claves.split()
-lista_nombre = datos_nombre.split() 
-lista_codigo = datos_codigo.split()
-lista_precio = datos_precio.split() 
+# lista_usuarios = datos_usuarios.split() 
+# lista_claves = datos_claves.split()
+# lista_nombre = datos_nombre.split() 
+# lista_codigo = datos_codigo.split()
+# lista_precio = datos_precio.split() 
 
 
-lista_final = []
-for usuario,clave in zip(lista_usuarios, lista_claves):
-    lista_final.append((usuario,clave))
-    print(usuario)
-    print(clave)
+# lista_final = []
+# for usuario,clave in zip(lista_usuarios, lista_claves):
+#     lista_final.append((usuario,clave))
+#     print(usuario)
+#     print(clave)
     
-print(lista_final)
+# print(lista_final)
 
 
-lista_final2 = []
-for nombre,codigo,precio in zip(lista_nombre, lista_codigo, lista_precio):
-    lista_final2.append((nombre,codigo,precio))
+# lista_final2 = []
+# for nombre,codigo,precio in zip(lista_nombre, lista_codigo, lista_precio):
+#     lista_final2.append((nombre,codigo,precio))
 
     
-print(lista_final2)
-cursor = conexion.cursor()
+# print(lista_final2)
+# cursor = conexion.cursor()
 # consulta_usuario = """ INSERT INTO USUARIO(USUARIO, CLAVE)
 #                     VALUES(?,?)
 #                 """
 # cursor.executemany(consulta_usuario, lista_final)
-consulta_producto = """ INSERT INTO PRODUCTO(NOMBRE,CODIGO,PRECIO)
-                    VALUES(?,?,?)
-                """
-cursor.executemany(consulta_producto, lista_final2)
+# consulta_producto = """ INSERT INTO PRODUCTO(NOMBRE,CODIGO,PRECIO)
+#                     VALUES(?,?,?)
+#                 """
+# cursor.executemany(consulta_producto, lista_final2)
+# conexion.commit()
+
+
+# nombre = str(input())
+# print(f"Ingrese nombre del producto: {nombre}")
+# codigo = input()
+# print(f"Ingrese codigo del producto: {codigo}")
+# precio = input()
+# print(f"Ingrese precio del producto: {precio}")
+
+# lista = (nombre, codigo, precio)
+# consulta = """  INSERT INTO PRODUCTO(NOMBRE,CODIGO,PRECIO)
+#                 VALUES(?,?,?)
+#             """
+# cursor = conexion.cursor()
+# cursor.executemany(consulta, lista)
+
+
+
+
 conexion.commit()
 conexion.close()
