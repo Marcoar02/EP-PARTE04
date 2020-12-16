@@ -1,0 +1,8 @@
+Integrantes:
+ Gomes Villavicencio Danitza
+ url: https://github.com/thelordjorge/EP-Parte01.git 
+ Hoyos Reyna Jorge
+ url:https://github.com/danitza1201/EP-Parte02.git
+ Amasifuen Rivera Marco
+ url:https://github.com/Marcoar02/EP-PARTE03.git 
+ url:https://github.com/Marcoar02/EP-PARTE04.git
